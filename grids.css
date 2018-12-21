@@ -1,0 +1,26 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+}
+
+.wrapper > div {
+	background: #eee;
+}
+
+.wrapper > div:nth-child(odd){
+	background: #ddd;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 4fr 2fr;
+}
+
+.content > div {
+	background: #ff99bb;
+	padding: 1em;
+}
+
+.content > div:nth-child(odd){
+	background: #ff80aa;
+}
