@@ -18,7 +18,6 @@
 
 .content > div {
 	background: #ff99bb;
-	padding: 1em;
 }
 
 .content > div:nth-child(odd){

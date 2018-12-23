@@ -1,0 +1,14 @@
+doctype
+html(lang="en")
+	head
+		title Japanese Webpage
+		link(rel="stylesheet" type="text/css" href="../css/grids.css")
+	body
+		.wrapper
+			div Blank Left
+			.content
+				div
+					- for(var i = 1; i <= 3; i++)
+						div= "Article" + i
+				div Best Articles
+			div Blank Right
