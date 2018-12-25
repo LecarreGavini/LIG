@@ -1,14 +1,34 @@
 doctype
 html(lang="en")
 	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
 		title Japanese Webpage
-		link(rel="stylesheet" type="text/css" href="../css/grids.css")
+		link(rel="stylesheet" type="text/css" href="../css/app.css")
 	body
-		.wrapper
-			div Blank Left
-			.content
-				div
-					- for(var i = 1; i <= 3; i++)
-						div= "Article" + i
-				div Best Articles
-			div Blank Right
+		header Website Logo
+		main
+			- for(var i = 1; i <= 3; i++)
+				.mySlides.fade
+					img(src="../img/slide" + i + ".jpg")
+			a.prev(onclick="plusSlides(-1)") &#10094;
+			a.next(onclick="plusSlides(1)") &#10095;
+			div(style="text-align:center")
+				- for(var i = 1; i <= 3; i++)
+					span.dot(onclick="currentSlide(" + i + ")")
+			.image-text
+				h1 キャッチコピーが入ります。
+				p サンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+		.container
+			.article-list
+				- for(var i = 1; i <= 10; i++)
+					article
+						#image
+							img(src="../img/ph_article.jpg" height="115" width="200")
+						#info
+							h4 サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+							p サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+			aside Best Articles
+		footer japanese website links
+	script(type="text/javascript" src="../js/app.js")
