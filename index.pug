@@ -21,14 +21,34 @@ html(lang="en")
 				h1 キャッチコピーが入ります。
 				p サンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
 		.container
-			.article-list
-				- for(var i = 1; i <= 10; i++)
-					article
-						#image
-							img(src="../img/ph_article.jpg" height="115" width="200")
-						#info
-							h4 サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-							p サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-			aside Best Articles
+			article
+				table
+					- for(var i = 1; i <= 10; i++)
+						tr
+							td
+								#image
+									img(src="../img/ph_article.jpg" height="115" width="200")
+							td 
+								#info
+									h4 サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+									p サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+			aside 
+				.recommend
+					.bnr Dummy Banner
+					table
+						tr
+							td(colspan="2")
+								#title-news Recommend
+						- for(var i = 1; i <= 3; i++)
+							tr
+								td
+									img(src="../img/ph_article.jpg" height="60" width="110")
+								td
+									p#headline サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+									p#timestamp 2016.03.26
+						- for(var i = 1; i <= 3; i++)
+							tr
+								td(colspan="2")
+									.banner Dummy Banner
 		footer japanese website links
 	script(type="text/javascript" src="../js/app.js")

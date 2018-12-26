@@ -3,15 +3,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Yu Gothic';
-	background: green;
-}
-
-.container {
-	display: grid;
-	margin: 0;
-	padding: 0;
-	grid-template-columns: 1fr 4fr 2fr 1fr;
-	background-color: lightblue;
 }
 
 header {
@@ -23,6 +14,7 @@ header {
 	font-size: 60px;
 	font-weight: 600;
 	font-family: "Lucida Calligraphy";
+	background-color: #FFFFFF;
 }
 
 main {
@@ -31,7 +23,6 @@ main {
 	max-height: 420px;
 	width: 100%;
 	margin: 0 0 40px 0;
-	background: black;
 }
 
 .mySlides {
@@ -124,21 +115,15 @@ main img {
 	.prev, .next,.text {font-size: 11px}
 }
 
-.article-list {
-	grid-column: 2/3;
+.container {
+	display: grid;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: 1fr 4fr 2fr 1fr;
 }
 
 article {
-	background: blueviolet;
-}
-
-aside { 
-	grid-column: 3/4;
-	background: orange;
-}
-
-footer {
-	background: lightpink;
+	grid-column: 2/3;
 }
 
 #image {
@@ -148,4 +133,68 @@ footer {
 #info {
 	display:inline-grid;
 	background: lavender;
+}
+
+aside { 
+	grid-column: 3/4;
+	margin-left: 20px;
+	background-color: black;
+}
+
+.recommend {
+	padding: 20px;
+	background-color: #E6E6E6;
+}
+
+.bnr {
+	font-weight: 500;
+	line-height: 300px;
+	text-align: center;
+	width: 100%;
+	height: 300px;
+	background-color: #FFFFFF;
+}
+
+table {
+	margin-top: -10px;
+	font-size: 12px;
+	border-spacing: 0 20px;
+}
+
+#title-news {
+	margin-top: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+  	border-bottom: 3px solid #000000;
+}
+
+#headline {
+	margin: 0;
+	margin-top: -5px;
+	font-weight: bold;
+	line-height: 1.2;
+	letter-spacing: -0.5px;
+	padding: 0 0 3px 5px;
+}
+
+#timestamp {
+	margin: 0;
+	font-size: 10px;
+	color: #808080;
+	padding: 0 0 0 5px;
+}
+
+.banner {
+	width: 100%;
+	height: 90px;
+	text-align: center;
+	line-height: 85px;
+	font-size: 16px;
+	color: #FFFFFF;
+	background-color: #737373;
+}
+
+footer {
+	background: lightpink;
 }
