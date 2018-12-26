@@ -111,10 +111,6 @@ main img {
 	to {opacity: 1}
 }
 
-@media only screen and (max-width: 300px) {
-	.prev, .next,.text {font-size: 11px}
-}
-
 .container {
 	display: grid;
 	margin: 0;
@@ -126,19 +122,60 @@ article {
 	grid-column: 2/3;
 }
 
-#image {
-	display:inline-grid;
+article table {
+	width: 98%;
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: 12px;
 }
 
-#info {
-	display:inline-grid;
-	background: lavender;
+article td {
+	line-height: 20px;
+}
+
+#article-img {
+	padding: 5px 10px 0 0;
+}
+
+.before {
+	display: inline;
+}
+
+.after {
+	display: none;
+}
+
+.timestamp {
+	vertical-align: top;
+	color: #808080;
+}
+
+.headline {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.description, #article-img {
+	padding-bottom: 2em;
+}
+
+.more {
+	margin: auto;
+	width: 400px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #404040
+	;
+}
+
+.arrow {
+	float: right;
+	padding-right: 18px;
 }
 
 aside { 
 	grid-column: 3/4;
 	margin-left: 20px;
-	background-color: black;
 }
 
 .recommend {
@@ -155,7 +192,7 @@ aside {
 	background-color: #FFFFFF;
 }
 
-table {
+.recommend table {
 	margin-top: -10px;
 	font-size: 12px;
 	border-spacing: 0 20px;
@@ -196,5 +233,23 @@ table {
 }
 
 footer {
-	background: lightpink;
+	margin-top: 90px;
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 15px 0;
+}
+
+.kanji {
+	grid-column: 2/3;
+}
+
+.kanji p {
+	display: inline;
+	margin: 0;
+	padding: 0 20px 0 0;
+}
+
+.copyright {
+	grid-column: 3/4;
+	text-align: right;
 }

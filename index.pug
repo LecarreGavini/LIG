@@ -23,15 +23,18 @@ html(lang="en")
 		.container
 			article
 				table
-					- for(var i = 1; i <= 10; i++)
-						tr
-							td
-								#image
-									img(src="../img/ph_article.jpg" height="115" width="200")
-							td 
-								#info
-									h4 サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-									p サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+					- for(var i = 0; i < 10; i++)
+						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
+							td(rowspan="3")#article-img
+								img.before(src="../img/ph_article.jpg" height="115" width="200")
+								img.after(src="../img/ph_article1.jpg" height="115" width="200")
+							td.timestamp 2016.03.26
+						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
+							td.headline サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
+							td.description サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト···
+				.more More
+					a.arrow &#10095;
 			aside 
 				.recommend
 					.bnr Dummy Banner
@@ -50,5 +53,10 @@ html(lang="en")
 							tr
 								td(colspan="2")
 									.banner Dummy Banner
-		footer japanese website links
+		footer 
+			.container 
+				div.kanji
+					p 運営会社
+					p 個人情報保護について
+				div.copyright ©2016 Sample
 	script(type="text/javascript" src="../js/app.js")
