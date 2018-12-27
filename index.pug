@@ -7,7 +7,8 @@ html(lang="en")
 		title Japanese Webpage
 		link(rel="stylesheet" type="text/css" href="../css/app.css")
 	body
-		header Website Logo
+		header 
+			a(href="next-page.html") Website Logo
 		main
 			- for(var i = 1; i <= 3; i++)
 				.mySlides.fade
@@ -25,38 +26,50 @@ html(lang="en")
 				table
 					- for(var i = 0; i < 10; i++)
 						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
-							td(rowspan="3")#article-img
-								img.before(src="../img/ph_article.jpg" height="115" width="200")
-								img.after(src="../img/ph_article1.jpg" height="115" width="200")
-							td.timestamp 2016.03.26
+							td(rowspan="3")
+								a(href="next-page.html")
+									img.before(src="../img/ph_article.jpg")
+									img.after(src="../img/ph_article1.jpg")
+							td.timestamp 
+								a(href="next-page.html") 2016.03.26
 						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
-							td.headline サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+							td.headline 
+								a(href="next-page.html") サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
 						tr(onmouseover="replaceImage("+ i +")" onmouseout="revertImage("+ i +")")
-							td.description サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト···
-				.more More
-					a.arrow &#10095;
+							td.description 
+								a(href="next-page.html") サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト···
+				a(href="next-page.html")
+					.more More
+						span.arrow &#10095;
 			aside 
 				.recommend
-					.bnr Dummy Banner
+					a(href="next-page.html")
+						.bnr Dummy Banner
 					table
 						tr
 							td(colspan="2")
-								#title-news Recommend
+								.news-title Recommend
 						- for(var i = 1; i <= 3; i++)
 							tr
 								td
-									img(src="../img/ph_article.jpg" height="60" width="110")
+									a(href="next-page.html")
+										img(src="../img/ph_article.jpg" height="60" width="110")
 								td
-									p#headline サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-									p#timestamp 2016.03.26
+									a(href="next-page.html")
+										p.headlines サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+										p.timestamp 2016.03.26
 						- for(var i = 1; i <= 3; i++)
 							tr
 								td(colspan="2")
-									.banner Dummy Banner
+									a(href="next-page.html")
+										.banner Dummy Banner
 		footer 
 			.container 
-				div.kanji
-					p 運営会社
-					p 個人情報保護について
-				div.copyright ©2016 Sample
+				.kanji
+					a(href="next-page.html")
+						p 運営会社
+						p 個人情報保護について
+				.copyright ©2016 Sample
+					a(href="#")
+						span.arrow &#10095;
 	script(type="text/javascript" src="../js/app.js")

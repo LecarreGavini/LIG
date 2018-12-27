@@ -1,255 +1,270 @@
+.container, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: 'Yu Gothic';
+  height: 100%;
+  font-family: "Yu Gothic";
 }
 
 header {
-	background: antiquewhite;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 125px;
-	height: 125px;
-	font-size: 60px;
-	font-weight: 600;
-	font-family: "Lucida Calligraphy";
-	background-color: #FFFFFF;
+  height: 125px;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 125px;
+  vertical-align: middle;
+  background-color: #FFFFFF;
+  font-family: "Lucida Calligraphy";
+}
+header a {
+  color: #000000;
+  text-decoration: none;
+}
+header a:active {
+  color: #808080;
 }
 
 main {
-	position: relative;
-	overflow: hidden;
-	max-height: 420px;
-	width: 100%;
-	margin: 0 0 40px 0;
+  width: 100%;
+  overflow: hidden;
+  max-height: 420px;
+  margin: 0 0 40px 0;
+  position: relative;
 }
-
-.mySlides {
-	display: none
+main .mySlides {
+  display: none;
 }
-
-main img {
-	height: 420px;
-	width: 100%;
-	vertical-align: middle;
+main .mySlides img {
+  width: 100%;
+  height: 420px;
+  vertical-align: middle;
 }
-
-.image-text {
-	position: absolute;
-	top: 25%;
-	left: 15%;
-	right: 15%;
-	text-align: center;
-	color: #FFFFFF;
-	z-index: 5;
+main .image-text {
+  top: 25%;
+  left: 15%;
+  right: 15%;
+  position: absolute;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 5;
 }
-
-.image-text h1 {
-	margin-right: -4%;
-	letter-spacing: 2px;
-	line-height: 40pt;
-	font-size: 55px;
+main .image-text h1 {
+  font-size: 55px;
+  line-height: 40pt;
+  margin-right: -4%;
+  letter-spacing: 2px;
 }
-
-.prev, .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -40px;
-	color: #FFFFFF;
-	font-size: 60px;
-	transition: 0.3s ease;
-	user-select: none;
+main .prev, main .next {
+  top: 50%;
+  width: auto;
+  cursor: pointer;
+  font-size: 60px;
+  margin-top: -40px;
+  user-select: none;
+  position: absolute;
+  transition: 0.3s ease;
+  color: #FFFFFF;
 }
-
-.next {
-	right: 12.5%;
+main .next:hover, main .prev:hover {
+  color: #FFC45D;
 }
-
-.next:hover, .prev:hover {
-	color:#FFC45D;
+main .next {
+  right: 12.5%;
 }
-
-.prev {
-	left: 12.5%;
+main .prev {
+  left: 12.5%;
 }
-
-.dot {
-	cursor: pointer;
-	position: relative;
-	bottom: 50px;
-	height: 15px;
-	width: 15px;
-	margin: 0 15px 15px 0;
-	background-color: #FFFFFF;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-	z-index: 5;
+main .dot {
+  width: 15px;
+  bottom: 50px;
+  height: 15px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 15px 15px 0;
+  display: inline-block;
+  background-color: #FFFFFF;
+  transition: background-color 0.6s ease;
+  z-index: 5;
 }
-
-.active, .dot:hover {
-	background-color:#FFC45D;
+main .active, main .dot:hover {
+  background-color: #FFC45D;
 }
-
-.fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
+main .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 @keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
-	display: grid;
-	margin: 0;
-	padding: 0;
-	grid-template-columns: 1fr 4fr 2fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 1fr;
 }
-
-article {
-	grid-column: 2/3;
+.container article {
+  grid-column: 2/3;
 }
-
-article table {
-	width: 98%;
-	border-spacing: 0;
-	border-collapse: collapse;
-	font-size: 12px;
+.container article table {
+  width: 98%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 12px;
 }
-
-article td {
-	line-height: 20px;
+.container article table td {
+  line-height: 20px;
 }
-
-#article-img {
-	padding: 5px 10px 0 0;
+.container article table td img {
+  width: 200px;
+  height: 115px;
+  padding: 5px 10px 2em 0;
 }
-
-.before {
-	display: inline;
+.container article table td .after {
+  display: none;
 }
-
-.after {
-	display: none;
+.container article table .timestamp {
+  vertical-align: top;
 }
-
-.timestamp {
-	vertical-align: top;
-	color: #808080;
+.container article table .timestamp a {
+  color: #808080;
+  text-decoration: none;
 }
-
-.headline {
-	font-size: 18px;
-	font-weight: bold;
+.container article table .timestamp a:active {
+  color: #808080;
 }
-
-.description, #article-img {
-	padding-bottom: 2em;
+.container article table .headline {
+  font-size: 18px;
+  font-weight: bold;
 }
-
-.more {
-	margin: auto;
-	width: 400px;
-	text-align: center;
-	color: #FFFFFF;
-	background-color: #404040
-	;
+.container article table .description {
+  padding-bottom: 2em;
 }
-
-.arrow {
-	float: right;
-	padding-right: 18px;
+.container article table .headline a, .container article table .description a {
+  color: #000000;
+  text-decoration: none;
 }
-
-aside { 
-	grid-column: 3/4;
-	margin-left: 20px;
+.container article table .headline a:active, .container article table .description a:active {
+  color: #808080;
 }
-
-.recommend {
-	padding: 20px;
-	background-color: #E6E6E6;
+.container article .more {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #404040;
 }
-
-.bnr {
-	font-weight: 500;
-	line-height: 300px;
-	text-align: center;
-	width: 100%;
-	height: 300px;
-	background-color: #FFFFFF;
+.container article .more .arrow {
+  float: right;
+  padding-right: 18px;
 }
-
-.recommend table {
-	margin-top: -10px;
-	font-size: 12px;
-	border-spacing: 0 20px;
+.container aside {
+  grid-column: 3/4;
+  margin-left: 20px;
 }
-
-#title-news {
-	margin-top: 30px;
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
-  	border-bottom: 3px solid #000000;
+.container aside .recommend {
+  padding: 20px 20px 0 20px;
+  background-color: #E6E6E6;
 }
-
-#headline {
-	margin: 0;
-	margin-top: -5px;
-	font-weight: bold;
-	line-height: 1.2;
-	letter-spacing: -0.5px;
-	padding: 0 0 3px 5px;
+.container aside .recommend a {
+  color: #000000;
+  text-decoration: none;
 }
-
-#timestamp {
-	margin: 0;
-	font-size: 10px;
-	color: #808080;
-	padding: 0 0 0 5px;
+.container aside .recommend a:active {
+  color: #808080;
 }
-
-.banner {
-	width: 100%;
-	height: 90px;
-	text-align: center;
-	line-height: 85px;
-	font-size: 16px;
-	color: #FFFFFF;
-	background-color: #737373;
+.container aside .recommend .bnr {
+  width: 100%;
+  height: 300px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 300px;
+  background-color: #FFFFFF;
+}
+.container aside .recommend table {
+  font-size: 12px;
+  margin-top: -10px;
+  border-spacing: 0 20px;
+}
+.container aside .recommend table .news-title {
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 3px solid #000000;
+}
+.container aside .recommend table .headlines {
+  margin: 0;
+  margin-top: -5px;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 0 0 3px 5px;
+  letter-spacing: -0.5px;
+}
+.container aside .recommend table .timestamp {
+  margin: 0;
+  font-size: 10px;
+  padding: 0 0 0 5px;
+  color: #808080;
+}
+.container aside .recommend table .banner {
+  width: 100%;
+  height: 90px;
+  font-size: 16px;
+  line-height: 85px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #737373;
 }
 
 footer {
-	margin-top: 90px;
-	color: #FFFFFF;
-	background-color: #000000;
-	padding: 15px 0;
+  padding: 15px 0;
+  margin-top: 90px;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+footer .container .kanji {
+  grid-column: 2/3;
+}
+footer .container .kanji a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .container .kanji a:active {
+  color: #808080;
+}
+footer .container .kanji p {
+  display: inline;
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+footer .container .copyright {
+  grid-column: 3/4;
+  text-align: right;
+}
+footer .container .copyright .arrow {
+  font-size: 30px;
+  margin-top: -70px;
+  position: absolute;
+  margin-left: -10px;
+  color: #000000;
+  transform: rotate(-90deg);
 }
 
-.kanji {
-	grid-column: 2/3;
-}
-
-.kanji p {
-	display: inline;
-	margin: 0;
-	padding: 0 20px 0 0;
-}
-
-.copyright {
-	grid-column: 3/4;
-	text-align: right;
-}
+/*# sourceMappingURL=app.css.map */
