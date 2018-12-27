@@ -12,19 +12,27 @@ function currentSlide(n) {
 function replaceImage(index) {
   var before = document.getElementsByClassName('before');
   var after = document.getElementsByClassName('after');
-  var headline = document.getElementsByClassName('headline');
+  var a = document.getElementsByTagName('a');
   before[index].style.display = "none";
   after[index].style.display = "inline";
-  headline[index].style.color = "#FFC61A";
+  if(index == 0)
+    index = index + 5;
+  else
+    index = (index*4) + 5;
+  a[index].style.color = "#FFC61A";
 }
 
 function revertImage(index) {
   var before = document.getElementsByClassName('before');
   var after = document.getElementsByClassName('after');
-  var headline = document.getElementsByClassName('headline');
+  var a = document.getElementsByTagName('a');
   before[index].style.display = "inline";
   after[index].style.display = "none";
-  headline[index].style.color = "#000000";
+  if(index == 0)
+    index = index + 5;
+  else
+    index = (index*4) + 5;
+  a[index].style.color = "#000000";
 }
 
 function showSlides(n) {
